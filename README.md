@@ -11,9 +11,7 @@
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [License](#license)
-- [Contributions](#contributions)
 - [Developers](#develpers)
 
 ## Overview
@@ -28,7 +26,7 @@ The teacher/faculty can display the QR Code using classroom projector so that pr
 - **Faculty Panel:** It has a Faculty View Panel that enables the teacher to remove duplicate or proxy attendances based on count.
 - **Dynamic QR:** Dynamically renders QR based on subject, time and date.
 - **User-Friendly Interface:** A straightforward web interface for effortless attendance management.
-- **Authentication for each student login:**Each student must authenticate to mark their attendance
+- **Authentication for each student login:** Each student must authenticate to mark their attendance
 - **Real-Time Tracking:** Mark attendance by scanning QR codes with real-time updates.
 - **Accessibility:** Easily access attendance records for quick reference.
 - **Export:** Export the attendance sheet for future use.
