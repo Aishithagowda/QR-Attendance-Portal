@@ -29,6 +29,7 @@ body {
 .header-title {
   font-size: 36px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .attendance-section {
@@ -42,34 +43,44 @@ body {
 
 .section-title {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #333;
 }
 
-.student-list {
-  list-style: none;
-  padding: 0;
-}
-
-.student {
-  margin-bottom: 10px;
-}
-
-.student-label {
+.attendance-form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
+  flex-direction: column;
 }
 
-.student-label:hover {
-  background-color: #e0e0e0;
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #3f51b5;
+}
+
+
+
+
 
 .submit-button {
   background-color: #007bff;
@@ -87,12 +98,17 @@ body {
   background-color: #0056b3;
 }
 
+.error-message {
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 .footer {
   background-color: #0350a1;
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0;
   width: 100%;
 }

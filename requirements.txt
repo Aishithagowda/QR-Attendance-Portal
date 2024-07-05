@@ -1,2 +1,5 @@
 qrcode
 django
+pandas
+openpyxl
+xlsxwriter

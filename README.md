@@ -153,6 +153,6 @@ Before you begin, ensure you have the following prerequisites installed:
 We welcome contributions from the community! If you'd like to contribute to this project, please follow our [contribution guidelines](CONTRIBUTING.md).
 
 ## Developers
-Created by __Team Hokage__ during __Live The Code 2.0__ Hackathon.
+Created by __Team MP32__ for __Mini Project__.
 
-Contributors : [Mohd Azeem](https://github.com/AzeemIdrisi), [Dheeraj Jha](https://github.com/Dheerajjha451), [Shantanu Pant](https://github.com/Shanty34)
+Contributors : [Aishitha V](), [Ananya Naik](), 

@@ -3,6 +3,7 @@ from django.core.validators import (
     MinValueValidator,
     MaxValueValidator,
 )
+from django.contrib.auth.models import User
 
 
 class Section(models.Model):
@@ -29,6 +30,7 @@ class Branch(models.Model):
 
 
 class Student(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     s_roll = models.CharField(max_length=20, primary_key=True)
     s_fname = models.CharField(max_length=20)
     s_lname = models.CharField(max_length=20)
