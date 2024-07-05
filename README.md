@@ -2,8 +2,6 @@
 
 # QR Attendance System
 
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/dbc0c061-76d0-45bb-b5da-7f4373ffd073)
-
 </div>
 
 ## Table of Contents
@@ -28,9 +26,12 @@ The teacher/faculty can display the QR Code using classroom projector so that pr
 
 - **Automatic IP Fetching:** It fetch your IPv4 address automatically and Generate a QR code based on that IP to enable connections within the classroom.
 - **Faculty Panel:** It has a Faculty View Panel that enables the teacher to remove duplicate or proxy attendances based on count.
+- **Dynamic QR:** Dynamically renders QR based on subject, time and date.
 - **User-Friendly Interface:** A straightforward web interface for effortless attendance management.
+- **Authentication for each student login:**Each student must authenticate to mark their attendance
 - **Real-Time Tracking:** Mark attendance by scanning QR codes with real-time updates.
 - **Accessibility:** Easily access attendance records for quick reference.
+- **Export:** Export the attendance sheet for future use.
 
 ## Prerequisites
 
@@ -39,6 +40,9 @@ Before you begin, ensure you have the following prerequisites installed:
 - **Python3**
 - **Django**
 - **qrcode**
+- **pandas**
+- **openpyxl**
+- **xlsxwriter**
 - **Web Browser:** Required for accessing the system interface.
 
 ## Setup
@@ -46,13 +50,13 @@ Before you begin, ensure you have the following prerequisites installed:
 1. **Clone the Repository:**
 
    ```
-   git clone https://github.com/AzeemIdrisi/QR-Attendance-System
+   git clone https://github.com/BhuvanCS/QR-Attendance-Portal
    ```
 
 2. **Navigate to the Project Directory:**
 
    ```
-   cd QR-Attendance-System
+   cd QR-Attendance-Portal
    ```
 
 
@@ -130,27 +134,12 @@ Before you begin, ensure you have the following prerequisites installed:
 
 3. **Mark Attendance:**
 
-   To mark attendance, scan the QR codes using a device connected to the same local network.
+   To mark attendance, scan the QR codes using a device connected to the same local network. Use username and password registered by the admin to record your attendance.
 
 4. **Real-Time Tracking:**
 
    The attendance records will be updated in real-time, ensuring accurate tracking.
 
-## Screenshots
-
-### Admin Page
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/e4c9f2d8-6b8e-44de-a63d-f7e5db45383e)
-
-### Student Page
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/a8e2f4a7-831c-4ac5-8e1b-c917a9ca9001)
-
-### Submission Successful Page
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/0f77779e-7648-4356-84c0-7db58b3e786c)
-
-
-## Contributions
-
-We welcome contributions from the community! If you'd like to contribute to this project, please follow our [contribution guidelines](CONTRIBUTING.md).
 
 ## Developers
 Created by __Team MP32__ for __Mini Project__.
