@@ -10,18 +10,7 @@ import json
 # Create your views here.
 
 present = set()
-scanned_devices = set()  # Set to store unique device IDs
 
-def mark_attendance(request):
-    if request.method == "POST":
-        data = json.loads(request.body)
-        device_id = data.get('deviceId')
-
-        if device_id in scanned_devices:
-            return JsonResponse({'success': False})
-
-        scanned_devices.add(device_id)
-        return JsonResponse({'success': True})
 
 @never_cache
 def add_manually_post(request):

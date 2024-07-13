@@ -4,7 +4,7 @@ from django.urls import reverse
 from .models import Student
 import qrcode
 import socket
-from StudentView.views import present,scanned_devices
+from StudentView.views import present
 from io import BytesIO
 from django.http import HttpResponse
 import pandas as pd
@@ -58,13 +58,11 @@ def faculty_view(request):
    if request.method == "POST":
         print(request)
         if 'student_id' in request.POST:
-            print('Hi')
             student_roll = request.POST["student_id"]
             student = Student.objects.get(s_roll=student_roll)
             if student in present:
                 present.remove(student)
         elif 'date' in request.POST and 'time' in request.POST and 'subject' in request.POST:
-            print('Hello')
             date = request.POST["date"]
             time = request.POST["time"]
             subject = request.POST["subject"]
@@ -75,13 +73,12 @@ def faculty_view(request):
             }
             qrfilename = qrgenerator(date, time, subject)
         elif 'submit' in request.POST:
-            print('yo')
             attendance_context = request.session.get('attendance_context', {})
             filename, excel_file = export_to_excel(present, attendance_context)
             response = HttpResponse(excel_file, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
             response['Content-Disposition'] = f'attachment; filename="{filename}"'
             present.clear()
-            scanned_devices.clear()
+            # scanned_devices.clear()
             
             return response
         return HttpResponseRedirect("/")

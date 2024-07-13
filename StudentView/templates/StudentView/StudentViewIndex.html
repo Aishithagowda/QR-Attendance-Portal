@@ -40,66 +40,7 @@
     </div>
 
     <footer class="footer">
-      <p>&copy; QR Attendance System 2023 - Team MP32</p>
+      <p>&copy; QR Attendance System 2024 - Team MP32</p>
     </footer>
-    <script>
-      // Generate a unique ID for the device if not already present
-    function getDeviceId() {
-        let deviceId = localStorage.getItem('deviceId');
-        if (!deviceId) {
-            deviceId = 'device_' + Math.random().toString(36).substr(2, 9);
-            localStorage.setItem('deviceId', deviceId);
-        }
-        return deviceId;
-    }
-
-    // Function to send device ID to Django server
-    function sendDeviceId(deviceId) {
-        fetch('/mark_attendance/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': '{{ csrf_token }}'
-            },
-            body: JSON.stringify({ deviceId: deviceId })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-              fetch('/add_manually/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': '{{ csrf_token }}'
-        },
-        body: JSON.stringify({ usn: usn, password: password })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Attendance marked successfully.');
-            // Optionally perform additional actions upon success
-        } else {
-            alert('Invalid credentials. Attendance not marked.');
-            // Optionally handle invalid credentials scenario
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Failed to mark attendance.');
-        // Optionally handle error scenarios
-    });
-            } else {
-                alert('You have already marked attendance.');
-            }
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const deviceId = getDeviceId();
-        console.log(deviceId);
-        sendDeviceId(deviceId);
-    });
-    </script>
   </body>
 </html>
